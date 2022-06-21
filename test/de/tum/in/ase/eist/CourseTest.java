@@ -6,8 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CourseTest {
 
-
-
 	// 1: Test getCourseTitle()
     @Test
     void testGetCourseTitle() {
@@ -16,7 +14,6 @@ class CourseTest {
         String observed = course1.getTitle();
         assertEquals(expected, observed);
     }
-
 
 	// 2: Test getNumberOfAttendees()
     @Test
@@ -27,6 +24,7 @@ class CourseTest {
         assertEquals(expected, observed);
     }
 
+    @Test
     void testThreeAttendees() {
         Course course1 = new Course("Math");
         Student Ed = new Student("Ed", "Sheeran", "10/18/1990", "Math",  "Guitar");
