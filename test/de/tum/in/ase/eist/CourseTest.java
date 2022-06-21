@@ -30,13 +30,13 @@ class CourseTest {
     @Test
     void testThreeAttendees() {
         Course course1 = new Course("Math");
-        Student Ed = new Student("Ed", "Sheeran", "10/18/1990", "Math",  "Guitar");
-        Student Charlie = new Student("Charlie", "Puth", "02/21/2007", "Math",  "Piano");
-        Student Shawn = new Student("Shawn", "Mendes", "02/21/1991", "Math",  "Vocal");
+        Student ed = new Student("Ed", "Sheeran", "10/18/1990", "Math",  "Guitar");
+        Student charlie = new Student("Charlie", "Puth", "02/21/2007", "Math",  "Piano");
+        Student shawn = new Student("Shawn", "Mendes", "02/21/1991", "Math",  "Vocal");
         List<Student> students = new ArrayList<>();
-        students.add(Ed);
-        students.add(Charlie);
-        students.add(Shawn);
+        students.add(ed);
+        students.add(charlie);
+        students.add(shawn);
         course1.setAttendees(students);
         int expected = 3;
         int observed = course1.getNumberOfAttendees();

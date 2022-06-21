@@ -15,7 +15,7 @@ class OnlineCourseTest {
         OnlineCourse onlineCourse = new OnlineCourse("Netflix");
         onlineCourse.setUrl("www.netflix.com");
         assertThrows(MalformedURLException.class, () -> { onlineCourse.setUrl("www.netflix.com"); });
-        URL expected = new URL("https://www.netflix.com/");
+        URL expected = new URL("www.netflix.com");
         URL observed = onlineCourse.getUrl();
         assertEquals(expected, observed);
     }
