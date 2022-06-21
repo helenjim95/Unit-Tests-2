@@ -11,10 +11,10 @@ class OnlineCourseTest {
 
 	// 3: Test setOnlineCourseUrl()
     @Test
-    void testSetOnlineCourseUrlWithValidUrl() throws MalformedURLException {
+    void testSetOnlineCourseUrlWithValidUrl() {
         OnlineCourse onlineCourse = new OnlineCourse("Netflix");
-//        onlineCourse.setUrl("https://www.netflix.com/browse");
-        assertThrows(MalformedURLException.class, () -> { onlineCourse.setUrl("https://www.netflix.com/browse"); });
+        onlineCourse.setUrl("https://www.netflix.com/browse");
+//        assertThrows(MalformedURLException.class, () -> { onlineCourse.setUrl("https://www.netflix.com/browse"); });
         URL expected = new URL("https://www.netflix.com/browse");
         URL observed = onlineCourse.getUrl();
         assertEquals(expected, observed);
